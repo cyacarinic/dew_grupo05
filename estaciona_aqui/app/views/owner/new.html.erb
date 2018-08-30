@@ -1,2 +1,99 @@
-<h1>Owner#new</h1>
-<p>Find me in app/views/owner/new.html.erb</p>
+
+
+<%= form_for :nuevacuentausuario, :html => { :method => :post } do |f| %>
+<form data-toggle="validator" role="form">
+<div class="form-group"> 	
+			<%= f.label :Nombres,{class:"control-label"}  %>
+		 
+	    	<%= f.text_field :Nombres,{class:"form-control"} %>
+	 
+<div>
+<div class="form-group">
+		<%= f.label :Apellido_Paterno,{class:"control-label"}  %>
+		 
+	    <%= f.text_field :Apellido_Paterno,{class:"form-control"} %>
+<div>
+<div class="form-group">
+		<%= f.label :Apellido_Materno,{class:"control-label"}  %>
+		 
+	    <%= f.text_field :Apellido_Materno,{class:"form-control"} %>
+<div>
+<div class="form-group">
+		<%= f.label :Masculino, {:class=>"radio-inline"} do %>
+		<%= f.radio_button :sexo,"valorseleccionado1"%>
+		Masculino
+		<% end %> 
+
+		<%= f.label :Femenino, {:class=>"radio-inline"} do %>
+		<%= f.radio_button :sexo,"valorseleccionado1"%>
+		Femenino
+		<% end %> 
+<div>
+<div class="form-group"> 
+		<%= f.label :Tipo_Documento , {class:"control-label"} %>
+  
+        <%= f.select :listaTipo_Documento,[["DNI",1],["Pasaporte",2]],{:include_blank=>"Seleccione"},{:class=>"form-control"} %>
+
+</div>
+<div class="form-group">
+		<%= f.label :Nro_Documento,{class:"control-label"}  %>
+		 
+	    <%= f.text_field :Nro_Documento,{class:"form-control"} %>
+<div>
+<div class="form-group"> 
+		<%= f.label :Tipo_Usuario , {class:"control-label"} %>
+  
+        <%= f.select :listaTipo_Usuario,[["Premium",1],["Free",2]],{:include_blank=>"Seleccione"},{:class=>"form-control"} %>
+
+</div>
+<div class="form-group">
+	    <%= f.label :Correo,{class:"control-label"}  %>
+		 
+	    <%= f.text_field :correo,{class:"form-control"} %>
+ 
+</div>
+<div class="form-group">
+	    <%= f.label :Confirmar_Correo,{class:"control-label"}  %>
+		 
+	    <%= f.text_field :Confirmar_Correo,{class:"form-control"} %>
+ 
+</div>
+<div class="form-group">
+	    <%= f.label :Confirmar_Correo,{class:"control-label"}  %>
+		 
+	    <%= f.text_field :Confirmar_Correo,{class:"form-control"} %>
+ 
+</div>
+ <div class="form-group">
+  		<%= f.label :Contraseña,{class:"control-label"}  %>
+		 
+	    <%= f.password_field :Contrasenia,{class:"form-control"} %>
+ 
+     
+  </div>
+   <div class="form-group">
+  		<%= f.label :Confirmar_Contraseña,{class:"control-label"}  %>
+		 
+	    <%= f.password_field :Confirmar_Contraseña,{class:"form-control"} %>     
+  </div>
+  <div class="form-group">
+ 	<%= f.label :Fecha_Nacimiento,{class:"control-label"}  %>
+		 
+	<%= f.date_field :Fecha_Nacimiento,{class:"form-control"} %>  
+
+  </div>
+  <div class="form-group">
+	    <%= f.label :Ingrese_Celular,{class:"control-label"}  %>
+		 
+	    <%= f.text_field :Ingrese_Celular,{class:"form-control"} %>
+ 
+</div>
+ <div class="form-group">
+ 
+		
+	<%= f.submit "Registrar",:class=>"btn btn-primary"%>
+ 
+    
+  </div>
+</form>
+<% end %>
