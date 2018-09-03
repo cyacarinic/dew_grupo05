@@ -1,0 +1,29 @@
+<%= form_for :login, :html => { :method => :post } do |f| %>
+
+<form data-toggle="validator" role="form"> 
+        <div class="col-sm-12">
+             <div class="form-group">
+            <%= f.label :ingrese_usuario,{class:"control-label"}  %>
+             
+            <%= f.text_field :ingrese_usuario,{class:"form-control"} %>     
+            </div>
+            <div class="form-group">
+            <%= f.label :ingrese_contraseña,{class:"control-label"}  %>
+             
+            <%= f.password_field :ingrese_contraseña,{class:"form-control"} %>     
+            </div>
+        </div>  
+
+   
+    <div class="col-sm-12">
+ <div class="form-group">
+ 
+        
+    <%= f.submit "Ingresar",:class=>"btn btn-primary"%>
+ 
+    
+  </div>
+  </div>
+</form>
+
+<% end %>

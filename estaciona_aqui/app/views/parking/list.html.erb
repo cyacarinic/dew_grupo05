@@ -1,2 +1,102 @@
-<h1>Parking#list</h1>
-<p>Find me in app/views/parking/list.html.erb</p>
+<%= form_for :EditarEstacionamiento, :html => { :method => :post } do |f| %>
+<form data-toggle="validator" role="form">
+<div class="col-sm-12">
+<div class="form-group">
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <div class="col-sm-3">
+	      <!-- "select" para insertar valores a nuestro combobox -->
+	      <%= f.select :Distrito, [["Lima","01"],["Ancon","02"],["Ate","03"],["Barranco","04"],["Breña","05"],["Carabayllo","06"],["Chaclacayo","07"],["Chorrillos","08"],["Cieneguilla","09"],["Comas","10"],["El Agustino","11"],["Independencia","12"],["Jesus Maria","13"],["La Molina","14"],["La Victoria","15"],["Lince","16"],["Los Olivos","17"],["Lurigancho","18"],["Lurin","19"],["Magdalena del Mar","20"],["Pueblo Libre (Magdalena Vieja)","21"],["Miraflores","22"],["Pachacamac","23"],["Pucusana","24"],["Puente Piedra","25"],["Punta Hermosa","26"],["Punta Negra","27"],["Rimac","28"],["San Bartolo","29"],["San Borja","30"],["San Isidro","31"],["San Juan de Lurigancho","32"],["San Juan de Miraflores","33"],["San Luis","34"],["San Martin de Porres","35"],["San Miguel","36"],["Santa Anita","37"],["Santa Maria del Mar","38"],["Santa Rosa","39"],["Santiago de Surco","40"],["Surquillo","41"],["Villa El Salvador","42"],["Villa Maria del Triunfo","43"]],{ :include_blank =>"Distrito"},{ :class => "form-control"} %>
+	  </div>
+	  <div class="col-sm-3">
+	    <!-- "select" para insertar valores a nuestro combobox -->
+		<%= f.select :TipoEst, [["Interior","I"],["Exterior","E"],["Aire Libre","A"]],{ :include_blank => "Tipo Estacionamiento"},{ :class => "form-control"} %>
+	  </div>
+	  <div class="col-sm-3">
+	    <!-- "select" para insertar valores a nuestro combobox -->
+	    <%= f.select :UbicEst, [["Sotano","0"],["Primer Piso","1"],["Segundo Piso","2"],["Tercer Piso","3"]],{ :include_blank => "Ubicacion Estacionamiento"},{ :class => "form-control"} %>
+	  </div>
+      <div class="col-sm-3 btn-group">
+          <div align="center"><%= link_to "Buscar", parking_search_path,:class=>"btn btn-primary" %></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+<div class="col-sm-12">
+<div class="form-group">
+
+<table data-toggle="table" data-url="data1.json">
+    <thead>
+        <tr>
+            <th data-field="id">Item ID</th>
+            <th data-field="name">Item Name</th>
+            <th data-field="price">Item Price</th>
+        </tr>
+    </thead>
+</table>
+</div>
+<div class="form-group">
+
+  <div class="table-responsive" style="overflow-x:auto">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>&nbsp;</th>
+        <th>Nombre Descriptivo</th>
+        <th>Dirección</th>
+        <th>Distrito</th>
+        <th>Telefono Fijo (opcional)</th>
+        <th>Precio X hora</th>
+        <th>Foto</th>
+        <th>Dimensiones</th>
+        <th>Tipo</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td><input type="checkbox" name="vehicle" value="Car"></td>
+        <td>Estcinamiento Amauta</td>
+        <td>Av naciones unidas</td>
+        <td>Cercado de Lima</td>
+        <td>3365388</td>
+        <td>5</td>
+        <td>[Foto]</td>
+        <td>35</td>
+        <td>New York</td>
+        <td>
+            <div class="btn-group">
+              <%= link_to "", parking_edit_path,:class=>"btn btn-warning glyphicon glyphicon-pencil" %>
+              <%= link_to "", parking_list_path,:class=>"btn btn-danger glyphicon glyphicon-trash"  %>
+            </div>
+        </td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td><input type="checkbox" name="vehicle" value="Car"></td>
+        <td>Estcinamiento UPC</td>
+        <td>Av La Marina</td>
+        <td>San Miguel</td>
+        <td>1234567</td>
+        <td>3</td>
+        <td>[Foto]</td>
+        <td>48</td>
+        <td>San Miguel</td>
+        <td>
+            <div class="btn-group">
+              <%= link_to "", parking_edit_path,:class=>"btn btn-warning glyphicon glyphicon-pencil" %>
+              <%= link_to "", parking_list_path,:class=>"btn btn-danger glyphicon glyphicon-trash"  %>
+            </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+</div>
+</form>
+<% end %>

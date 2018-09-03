@@ -1,4 +1,5 @@
 class ParkingController < ApplicationController
+  layout 'internal'
   def new
   end
 

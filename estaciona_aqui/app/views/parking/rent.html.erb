@@ -1,2 +1,71 @@
-<h1>Parking#rent</h1>
-<p>Find me in app/views/parking/rent.html.erb</p>
+<%= form_for :nuevoAlquiler, :html => { :method => :post } do |f| %>
+<form data-toggle="validator" role="form">
+ <div class="col-sm-12">
+
+</div>
+<div class="col-sm-12">
+<div class="form-group"> 	
+			<%= f.label :Estacionamiento,{class:"control-label"}  %>
+		 
+	    	<%= f.text_field :Estacionamiento,{class:"form-control"} %>
+	 
+</div></div>
+
+<div class="col-sm-12">
+<%= f.label :Datos_Usuario,{class:"control-label"}  %>
+</div>
+<div class="col-sm-12">
+<div class="form-group"> 	
+			<%= f.label :Nombres,{class:"control-label"}  %>
+		 
+	    	<%= f.text_field :Nombres,{class:"form-control"} %>
+	 
+</div></div>
+<div class="col-sm-12">
+<div class="form-group">
+		<%= f.label :Apellido_Paterno,{class:"control-label"}  %>
+		 
+	    <%= f.text_field :Apellido_Paterno,{class:"form-control"} %>
+</div>
+</div>
+<div class="col-sm-12">
+<div class="form-group">
+		<%= f.label :Apellido_Materno,{class:"control-label"}  %>
+		 
+	    <%= f.text_field :Apellido_Materno,{class:"form-control"} %>
+</div>
+</div>
+<br> 
+ <div class="col-sm-6">
+  <div class="form-group">
+ 	<%= f.label :Fecha_Alquiler,{class:"control-label"}  %>
+		 
+	<%= f.date_field :Fecha_Alquiler,{class:"form-control"} %>  
+
+  </div>
+  </div>
+  <div class="col-sm-6">
+  <div class="form-group">
+ 	<%= f.label :Horas_de_atención,{class:"control-label"}  %>
+		 
+	<%= f.number_field :Horas_de_atención,{class:"form-control"} %>  
+
+  </div>
+  </div>
+ 
+ 
+ 
+   
+
+ 
+	<div class="col-sm-12">
+ <div class="form-group">
+ 
+		
+	<%= f.submit "Alquilar ya",:class=>"btn btn-primary"%>
+    <a class="btn btn-alert" href="/">Volver</a>
+     
+  </div>
+  </div>
+</form>
+<% end %>

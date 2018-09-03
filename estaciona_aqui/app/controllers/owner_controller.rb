@@ -1,4 +1,5 @@
 class OwnerController < ApplicationController
+  layout 'internal'
   def new
   end
 

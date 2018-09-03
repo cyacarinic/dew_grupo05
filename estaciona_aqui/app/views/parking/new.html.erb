@@ -2,55 +2,62 @@
 
 <%= form_for :nuevacuentausuario, :html => { :method => :post } do |f| %>
 <form data-toggle="validator" role="form">
+ 
+	<div class="col-sm-6">
+		<div class="form-group"> 	
+					<%= f.label :Nombres,{class:"control-label"}  %>
+				 
+			    	<%= f.text_field :Nombres,{class:"form-control"} %>
+			 
+		</div>
+	</div>
+	<div class="col-sm-6">
+		<div class="form-group">
+				<%= f.label :Telefono_Fijo,{class:"control-label"}  %>
+				 
+			    <%= f.text_field :Telefono_Fijo,{class:"form-control"} %>
+		</div>
+	</div> 
+	<div class="col-sm-6">
+		<div class="form-group">
+				<%= f.label :Precio_x_Hora,{class:"control-label"}  %>
+				 
+			    <%= f.text_field :Precio_x_Hora,{class:"form-control"} %>
+		</div>
+	</div>
+	<div class="col-sm-6">
+		<div class="form-group"> 
+				<%= f.label :Tipo_Estacionamiento , {class:"control-label"} %>
+		  
+		        <%= f.select :listaTipo_Usuario,[["Interior",1],["Aire libre",2],["Exterior",2]],{:include_blank=>"Seleccione"},{:class=>"form-control"} %>
 
-<div class="form-group"> 	
-			<%= f.label :Nombres,{class:"control-label"}  %>
-		 
-	    	<%= f.text_field :Nombres,{class:"form-control"} %>
-	 
-<div>
+		</div>
+	</div>	 
+<div class="col-sm-12">
 <div class="form-group">
 		<%= f.label :Direccion,{class:"control-label"}  %>
 		 
 	    <%= f.text_field :Direccion,{class:"form-control"} %>
-<div>
-<div class="form-group">
-		<%= f.label :Telefono_Fijo,{class:"control-label"}  %>
-		 
-	    <%= f.text_field :Telefono_Fijo,{class:"form-control"} %>
-<div>
-<div class="form-group">
-		<%= f.label :Precio_x_Hora,{class:"control-label"}  %>
-		 
-	    <%= f.text_field :Precio_x_Hora,{class:"form-control"} %>
-<div>
-<div class="form-group"> 
-		<%= f.label :Tipo_Estacionamiento , {class:"control-label"} %>
-  
-        <%= f.select :listaTipo_Usuario,[["Interior",1],["Aire libre",2],["Exterior",2]],{:include_blank=>"Seleccione"},{:class=>"form-control"} %>
-
 </div>
-<div class="form-group">
-		<%= f.label :Direccion,{class:"control-label"}  %>
-		 
-	    <%= f.text_field :Direccion,{class:"form-control"} %>
-<div>
+</div>
 <!--iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d15605.732589541925!2d-77.0939804302246!3d-12.082471699999996!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2spe!4v1535634685701" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe-->
-
+ <div class="col-sm-12">
     <div class="form-group">
          
          	<iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d15605.732589541925!2d-77.0939804302246!3d-12.082471699999996!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2spe!4v1535634685701" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
        
     </div>
+    </div>
+    <div class="col-sm-12">
 <div class="form-group"> 
   <%= f.file_field :subirfoto %>  
 </div>
+</div>
+ <div class="col-sm-12">
  <div class="form-group">
+ 	<%= f.submit "Registrar Datos",:class=>"btn btn-primary"%>
  
-		
-	<%= f.submit "Registrar Datos",:class=>"btn btn-primary"%>
- 
-    
+  </div>
   </div>
 </form>
 <% end %>

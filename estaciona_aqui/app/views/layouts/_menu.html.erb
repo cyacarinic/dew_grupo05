@@ -1,12 +1,10 @@
-<li><%= link_to "Conócenos", about_path  %> </li>
-<li><%= link_to "Nuestros servicios", services_path  %> </li>
 <!-- Propietarios -->
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Propietarios <b class="caret"></b></a>
   <ul class="dropdown-menu">
     <li><%= link_to "Listar Propietario", owner_list_path  %> </li>
-    <li class="divider"></li>
-    <li><%= link_to "Registrar Propietario", owner_new_path  %> </li>
+    <!-- <li class="divider"></li>
+    <li><%= link_to "Registrar Propietario", owner_new_path  %> </li> -->
     <li class="divider"></li>
     <li><%= link_to "Buscar Propietario", owner_search_path  %> </li>
     <li class="divider"></li>
@@ -18,8 +16,8 @@
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Usuarios <b class="caret"></b></a>
   <ul class="dropdown-menu">
     <li><%= link_to "Listar Usuarios", user_list_path  %> </li>
-    <li class="divider"></li>
-    <li><%= link_to "Registrar Usuario", user_new_path  %> </li>
+    <!-- <li class="divider"></li>
+    <li><%= link_to "Registrar Usuario", user_new_path  %> </li> -->
     <li class="divider"></li>
     <li><%= link_to "Buscar Usuarios", user_search_path  %> </li>
     <li class="divider"></li>
@@ -30,14 +28,17 @@
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Estacionamientos <b class="caret"></b></a>
   <ul class="dropdown-menu">
+    <li><%= link_to "Registrar Estacionamiento", parking_new_path  %> </li>
+    <li class="divider"></li>
     <li><%= link_to "Listar Estacionamientos", parking_list_path  %> </li>
     <li class="divider"></li>
-    <li><%= link_to "Registrar Estacionamiento", parking_new_path  %> </li>
+    <li><%= link_to "Alquilar Estacionamiento", parking_rent_path  %> </li>
     <li class="divider"></li>
     <li><%= link_to "Buscar Estacionamientos", parking_search_path  %> </li>
     <li class="divider"></li>
     <li><%= link_to "Editar Estacionamiento", parking_edit_path  %> </li>
-    <li class="divider"></li>
-    <li><%= link_to "Alquilar Estacionamiento", parking_rent_path  %> </li>
   </ul>
 </li>
+<!-- Sesiones -->
+<li><%= link_to "Regístrate", owner_new_path , {:style=>'color:#428bca;'} %> </li>
+<li><%= link_to "Ingresar", user_login_path , {:style=>'color:#428bca;'} %> </li>
