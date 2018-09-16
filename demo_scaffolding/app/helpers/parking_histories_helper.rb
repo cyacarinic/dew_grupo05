@@ -1,0 +1,2 @@
+module ParkingHistoriesHelper
+end
