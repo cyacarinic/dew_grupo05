@@ -3,23 +3,23 @@
 one:
   usertype_id: 1
   documenttype_id: 1
+  gender_id: 1
   nombres: MyString
   apellidos: MyString
   correo: MyString
   numero_documento: 1
   contrasenia: MyString
-  genero: MyString
-  fecha_nacimiento: 2018-09-16 20:43:19
+  fecha_nacimiento: 2018-09-16 21:58:04
   telefono: MyString
 
 two:
   usertype_id: 1
   documenttype_id: 1
+  gender_id: 1
   nombres: MyString
   apellidos: MyString
   correo: MyString
   numero_documento: 1
   contrasenia: MyString
-  genero: MyString
-  fecha_nacimiento: 2018-09-16 20:43:19
+  fecha_nacimiento: 2018-09-16 21:58:04
   telefono: MyString

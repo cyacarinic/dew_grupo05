@@ -12,20 +12,21 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :usertype_id, "Tipo de usuario" %>
+    <%= form.label :usertype_id %>
     <!-- <%= form.number_field :usertype_id, id: :user_usertype_id %> -->
     <%= form.collection_select :usertype_id, Usertype.all, :id, :nombre %>
   </div>
 
   <div class="field">
-    <%= form.label :documenttype_id, "Tipo de documento" %>
+    <%= form.label :documenttype_id %>
     <!-- <%= form.number_field :documenttype_id, id: :user_documenttype_id %> -->
     <%= form.collection_select :documenttype_id, Documenttype.all, :id, :nombre %>
   </div>
 
   <div class="field">
-    <%= form.label :numero_documento %>
-    <%= form.text_field :numero_documento, id: :user_numero_documento %>
+    <%= form.label :gender_id %>
+    <!-- <%= form.number_field :gender_id, id: :user_gender_id %> -->
+    <%= form.collection_select :gender_id, Gender.all, :id, :nombre %>
   </div>
 
   <div class="field">
@@ -44,13 +45,13 @@
   </div>
 
   <div class="field">
-    <%= form.label :contrasenia %>
-    <%= form.password_field :contrasenia, id: :user_contrasenia %>
+    <%= form.label :numero_documento %>
+    <%= form.number_field :numero_documento, id: :user_numero_documento %>
   </div>
 
   <div class="field">
-    <%= form.label :genero %>
-    <%= form.text_field :genero, id: :user_genero %>
+    <%= form.label :contrasenia %>
+    <%= form.text_field :contrasenia, id: :user_contrasenia %>
   </div>
 
   <div class="field">

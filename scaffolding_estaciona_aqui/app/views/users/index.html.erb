@@ -10,9 +10,9 @@
       <th>Numero documento</th>
       <th>Nombres</th>
       <th>Apellidos</th>
+      <th>Género</th>
       <th>Correo</th>
-      <!-- <th>Contrasenia</th> -->
-      <th>Genero</th>
+      <th>Contrasenia</th>
       <th>Fecha nacimiento</th>
       <th>Telefono</th>
       <th colspan="3"></th>
@@ -22,14 +22,17 @@
   <tbody>
     <% @users.each do |user| %>
       <tr>
+        <!-- <td><%= user.usertype_id %></td>
+        <td><%= user.documenttype_id %></td>
+        <td><%= user.gender_id %></td> -->
         <td><%= user.usertype.nombre %></td>
         <td><%= user.documenttype.nombre %></td>
         <td><%= user.numero_documento %></td>
         <td><%= user.nombres %></td>
         <td><%= user.apellidos %></td>
+        <td><%= user.gender.nombre %></td>
         <td><%= user.correo %></td>
-        <!-- <td><%= user.contrasenia %></td> -->
-        <td><%= user.genero %></td>
+        <td><%= user.contrasenia %></td>
         <td><%= user.fecha_nacimiento %></td>
         <td><%= user.telefono %></td>
         <td><%= link_to 'Show', user %></td>

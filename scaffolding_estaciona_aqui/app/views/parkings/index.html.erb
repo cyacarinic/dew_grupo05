@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>User</th>
       <th>Nombre</th>
       <th>Descripcion</th>
       <th>Telefono</th>
@@ -22,6 +23,7 @@
   <tbody>
     <% @parkings.each do |parking| %>
       <tr>
+        <td><%= parking.user_id %></td>
         <td><%= parking.nombre %></td>
         <td><%= parking.descripcion %></td>
         <td><%= parking.telefono %></td>

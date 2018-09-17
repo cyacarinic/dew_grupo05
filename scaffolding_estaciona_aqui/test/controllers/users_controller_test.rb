@@ -17,7 +17,7 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
 
   test "should create user" do
     assert_difference('User.count') do
-      post users_url, params: { user: { apellidos: @user.apellidos, contrasenia: @user.contrasenia, correo: @user.correo, documenttype_id: @user.documenttype_id, fecha_nacimiento: @user.fecha_nacimiento, genero: @user.genero, nombres: @user.nombres, numero_documento: @user.numero_documento, telefono: @user.telefono, usertype_id: @user.usertype_id } }
+      post users_url, params: { user: { apellidos: @user.apellidos, contrasenia: @user.contrasenia, correo: @user.correo, documenttype_id: @user.documenttype_id, fecha_nacimiento: @user.fecha_nacimiento, gender_id: @user.gender_id, nombres: @user.nombres, numero_documento: @user.numero_documento, telefono: @user.telefono, usertype_id: @user.usertype_id } }
     end
 
     assert_redirected_to user_url(User.last)
@@ -34,7 +34,7 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update user" do
-    patch user_url(@user), params: { user: { apellidos: @user.apellidos, contrasenia: @user.contrasenia, correo: @user.correo, documenttype_id: @user.documenttype_id, fecha_nacimiento: @user.fecha_nacimiento, genero: @user.genero, nombres: @user.nombres, numero_documento: @user.numero_documento, telefono: @user.telefono, usertype_id: @user.usertype_id } }
+    patch user_url(@user), params: { user: { apellidos: @user.apellidos, contrasenia: @user.contrasenia, correo: @user.correo, documenttype_id: @user.documenttype_id, fecha_nacimiento: @user.fecha_nacimiento, gender_id: @user.gender_id, nombres: @user.nombres, numero_documento: @user.numero_documento, telefono: @user.telefono, usertype_id: @user.usertype_id } }
     assert_redirected_to user_url(@user)
   end
 

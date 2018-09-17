@@ -1,6 +1,7 @@
 class CreateParkings < ActiveRecord::Migration[5.1]
   def change
     create_table :parkings do |t|
+      t.integer :user_id
       t.string :nombre, limit: 45
       t.string :descripcion, limit: 45
       t.string :telefono, limit: 9

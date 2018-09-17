@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180917014415) do
+ActiveRecord::Schema.define(version: 20180917025823) do
 
   create_table "additionalservices", force: :cascade do |t|
     t.integer "parking_id"
@@ -22,6 +22,12 @@ ActiveRecord::Schema.define(version: 20180917014415) do
   end
 
   create_table "documenttypes", force: :cascade do |t|
+    t.string "nombre", limit: 30
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "genders", force: :cascade do |t|
     t.string "nombre", limit: 30
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -40,6 +46,7 @@ ActiveRecord::Schema.define(version: 20180917014415) do
   end
 
   create_table "parkings", force: :cascade do |t|
+    t.integer "user_id"
     t.string "nombre", limit: 45
     t.string "descripcion", limit: 45
     t.string "telefono", limit: 9
@@ -66,12 +73,12 @@ ActiveRecord::Schema.define(version: 20180917014415) do
   create_table "users", force: :cascade do |t|
     t.integer "usertype_id"
     t.integer "documenttype_id"
+    t.integer "gender_id"
     t.string "nombres", limit: 45
     t.string "apellidos", limit: 45
     t.string "correo", limit: 45
     t.integer "numero_documento"
     t.string "contrasenia", limit: 45
-    t.string "genero", limit: 10
     t.datetime "fecha_nacimiento"
     t.string "telefono", limit: 9
     t.datetime "created_at", null: false

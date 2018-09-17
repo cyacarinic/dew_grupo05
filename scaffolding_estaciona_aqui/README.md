@@ -14,24 +14,30 @@ rails g scaffold Usertype \
     nombre:string{45} \
     descripcion:string{45}
 
+
 rails g scaffold Documenttype \
+    nombre:string{30}
+
+
+rails g scaffold Gender \
     nombre:string{30}
 
 
 rails g scaffold User \
     usertype_id:integer \
     documenttype_id:integer \
+    gender_id:integer \
     nombres:string{45} \
     apellidos:string{45} \
     correo:string{45} \
     numero_documento:integer \
     contrasenia:string{45} \
-    genero:string{10} \
     fecha_nacimiento:datetime \
     telefono:string{9}
 
 
 rails g scaffold Parking \
+    user_id:integer \
     nombre:string{45} \
     descripcion:string{45} \
     telefono:string{9} \

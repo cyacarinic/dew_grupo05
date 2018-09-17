@@ -1,13 +1,18 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Usertype:</strong>
-  <%= @user.usertype_id %>
+  <strong>Tipo de Usuario:</strong>
+  <%= @user.usertype.nombre %>
 </p>
 
 <p>
-  <strong>Documenttype:</strong>
-  <%= @user.documenttype_id %>
+  <strong>Tipo de Documento:</strong>
+  <%= @user.documenttype.nombre %>
+</p>
+
+<p>
+  <strong>Numero documento:</strong>
+  <%= @user.numero_documento %>
 </p>
 
 <p>
@@ -21,24 +26,19 @@
 </p>
 
 <p>
+  <strong>Género:</strong>
+  <%= @user.gender.nombre %>
+</p>
+
+<p>
   <strong>Correo:</strong>
   <%= @user.correo %>
 </p>
 
-<p>
-  <strong>Numero documento:</strong>
-  <%= @user.numero_documento %>
-</p>
-
-<p>
+<!-- <p>
   <strong>Contrasenia:</strong>
   <%= @user.contrasenia %>
-</p>
-
-<p>
-  <strong>Genero:</strong>
-  <%= @user.genero %>
-</p>
+</p> -->
 
 <p>
   <strong>Fecha nacimiento:</strong>
