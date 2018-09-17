@@ -7,4 +7,4 @@ test:
 production:
   adapter: redis
   url: redis://localhost:6379/1
-  channel_prefix: demo_scaffolding_production
+  channel_prefix: scaffolding_estaciona_aqui_production
