@@ -6,11 +6,11 @@
   <thead>
     <tr>
       <th>Usertype</th>
+      <th>Documenttype</th>
       <th>Nombres</th>
       <th>Apellidos</th>
       <th>Correo</th>
       <th>Numero documento</th>
-      <th>Tipo documento</th>
       <th>Contrasenia</th>
       <th>Genero</th>
       <th>Fecha nacimiento</th>
@@ -23,11 +23,11 @@
     <% @users.each do |user| %>
       <tr>
         <td><%= user.usertype_id %></td>
+        <td><%= user.documenttype_id %></td>
         <td><%= user.nombres %></td>
         <td><%= user.apellidos %></td>
         <td><%= user.correo %></td>
         <td><%= user.numero_documento %></td>
-        <td><%= user.tipo_documento %></td>
         <td><%= user.contrasenia %></td>
         <td><%= user.genero %></td>
         <td><%= user.fecha_nacimiento %></td>

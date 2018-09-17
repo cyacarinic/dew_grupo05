@@ -2,24 +2,24 @@
 
 one:
   usertype_id: 1
+  documenttype_id: 1
   nombres: MyString
   apellidos: MyString
   correo: MyString
   numero_documento: 1
-  tipo_documento: MyString
   contrasenia: MyString
   genero: MyString
-  fecha_nacimiento: 2018-09-16 17:37:28
+  fecha_nacimiento: 2018-09-16 19:30:11
   telefono: MyString
 
 two:
   usertype_id: 1
+  documenttype_id: 1
   nombres: MyString
   apellidos: MyString
   correo: MyString
   numero_documento: 1
-  tipo_documento: MyString
   contrasenia: MyString
   genero: MyString
-  fecha_nacimiento: 2018-09-16 17:37:28
+  fecha_nacimiento: 2018-09-16 19:30:11
   telefono: MyString

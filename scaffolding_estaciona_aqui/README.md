@@ -3,14 +3,17 @@ rails g scaffold UserType \
     nombre:string{45} \
     descripcion:string{45}
 
+rails g scaffold DocumentType \
+    nombre:string{30}
+
 
 rails g scaffold User \
     usertype_id:integer \
+    documenttype_id:integer \
     nombres:string{45} \
     apellidos:string{45} \
     correo:string{45} \
     numero_documento:integer \
-    tipo_documento:string{4} \
     contrasenia:string{45} \
     genero:string{10} \
     fecha_nacimiento:datetime \

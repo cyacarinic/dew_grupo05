@@ -3,17 +3,17 @@
 one:
   user_id: 1
   parking_id: 1
-  fecha_inicio: 2018-09-16 17:38:28
-  fecha_fin: 2018-09-16 17:38:28
-  fecha_registro: 2018-09-16 17:38:28
-  fecha_cancelacion: 2018-09-16 17:38:28
+  fecha_inicio: 2018-09-16 19:30:26
+  fecha_fin: 2018-09-16 19:30:26
+  fecha_registro: 2018-09-16 19:30:26
+  fecha_cancelacion: 2018-09-16 19:30:26
   motivo_cancelacion: MyString
 
 two:
   user_id: 1
   parking_id: 1
-  fecha_inicio: 2018-09-16 17:38:28
-  fecha_fin: 2018-09-16 17:38:28
-  fecha_registro: 2018-09-16 17:38:28
-  fecha_cancelacion: 2018-09-16 17:38:28
+  fecha_inicio: 2018-09-16 19:30:26
+  fecha_fin: 2018-09-16 19:30:26
+  fecha_registro: 2018-09-16 19:30:26
+  fecha_cancelacion: 2018-09-16 19:30:26
   motivo_cancelacion: MyString

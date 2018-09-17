@@ -13,7 +13,13 @@
 
   <div class="field">
     <%= form.label :usertype_id %>
-    <%= form.number_field :usertype_id, id: :user_usertype_id %>
+    <!-- <%= form.number_field :usertype_id, id: :user_usertype_id %> -->
+    <%= form.collection_select :usertype_id, UserType.all, :id, :nombre %>
+  </div>
+
+  <div class="field">
+    <%= form.label :correo %>
+    <%= form.text_field :correo, id: :user_correo %>
   </div>
 
   <div class="field">
@@ -27,8 +33,9 @@
   </div>
 
   <div class="field">
-    <%= form.label :correo %>
-    <%= form.text_field :correo, id: :user_correo %>
+    <%= form.label :documenttype_id %>
+    <!-- <%= form.number_field :documenttype_id, id: :user_documenttype_id %> -->
+    <%= form.collection_select :documenttype_id, DocumentType.all, :id, :nombre %>
   </div>
 
   <div class="field">
@@ -37,13 +44,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :tipo_documento %>
-    <%= form.text_field :tipo_documento, id: :user_tipo_documento %>
-  </div>
-
-  <div class="field">
     <%= form.label :contrasenia %>
-    <%= form.text_field :contrasenia, id: :user_contrasenia %>
+    <%= form.password_field :contrasenia, id: :user_contrasenia %>
   </div>
 
   <div class="field">
