@@ -1,0 +1,22 @@
+<%= form_with(model: parkingtype, local: true) do |form| %>
+  <% if parkingtype.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(parkingtype.errors.count, "error") %> prohibited this parkingtype from being saved:</h2>
+
+      <ul>
+      <% parkingtype.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nombre %>
+    <%= form.text_field :nombre, id: :parkingtype_nombre %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

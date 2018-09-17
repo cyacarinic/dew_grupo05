@@ -36,6 +36,10 @@ rails g scaffold User \
     telefono:string{9}
 
 
+rails g scaffold Parkingtype \
+    nombre:string{30}
+
+
 rails g scaffold Parking \
     user_id:integer \
     nombre:string{45} \

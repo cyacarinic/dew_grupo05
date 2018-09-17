@@ -1,0 +1,2 @@
+module ParkingtypesHelper
+end

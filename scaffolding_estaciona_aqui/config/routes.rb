@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :rates
   resources :additionalservices
   resources :parkings
+  resources :parkingtypes
   resources :users
   resources :genders
   resources :documenttypes
