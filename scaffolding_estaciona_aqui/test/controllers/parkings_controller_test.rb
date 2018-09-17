@@ -17,7 +17,7 @@ class ParkingsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create parking" do
     assert_difference('Parking.count') do
-      post parkings_url, params: { parking: { ciudad: @parking.ciudad, departamento: @parking.departamento, descripcion: @parking.descripcion, direccion: @parking.direccion, distrito: @parking.distrito, imagen: @parking.imagen, nombre: @parking.nombre, precio_hora: @parking.precio_hora, telefono: @parking.telefono, tipo_estacionamiento: @parking.tipo_estacionamiento, user_id: @parking.user_id } }
+      post parkings_url, params: { parking: { ciudad: @parking.ciudad, departamento: @parking.departamento, descripcion: @parking.descripcion, direccion: @parking.direccion, distrito: @parking.distrito, imagen: @parking.imagen, nombre: @parking.nombre, parkingtype_id: @parking.parkingtype_id, precio_hora: @parking.precio_hora, telefono: @parking.telefono, user_id: @parking.user_id } }
     end
 
     assert_redirected_to parking_url(Parking.last)
@@ -34,7 +34,7 @@ class ParkingsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update parking" do
-    patch parking_url(@parking), params: { parking: { ciudad: @parking.ciudad, departamento: @parking.departamento, descripcion: @parking.descripcion, direccion: @parking.direccion, distrito: @parking.distrito, imagen: @parking.imagen, nombre: @parking.nombre, precio_hora: @parking.precio_hora, telefono: @parking.telefono, tipo_estacionamiento: @parking.tipo_estacionamiento, user_id: @parking.user_id } }
+    patch parking_url(@parking), params: { parking: { ciudad: @parking.ciudad, departamento: @parking.departamento, descripcion: @parking.descripcion, direccion: @parking.direccion, distrito: @parking.distrito, imagen: @parking.imagen, nombre: @parking.nombre, parkingtype_id: @parking.parkingtype_id, precio_hora: @parking.precio_hora, telefono: @parking.telefono, user_id: @parking.user_id } }
     assert_redirected_to parking_url(@parking)
   end
 

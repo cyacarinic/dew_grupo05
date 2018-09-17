@@ -13,5 +13,5 @@ User.create({usertype_id: 1, documenttype_id: 1, gender_id: 1, nombres: "Claudio
 User.create({usertype_id: 2, documenttype_id: 2, gender_id: 2, nombres: "Maria", apellidos: "Calle", correo: "mccq@gmail.com", numero_documento: "02475261", contrasenia: "P@ssw0rd", fecha_nacimiento: "1989-12-08 05:00:00 UTC", telefono: "928374615"})
 
 Parkingtype.create({id: 1, nombre: "Premium"})
-Parkingtype.create({id: 1, nombre: "Interior"})
-Parkingtype.create({id: 1, nombre: "Exterior"})
+Parkingtype.create({id: 2, nombre: "Interior"})
+Parkingtype.create({id: 3, nombre: "Exterior"})

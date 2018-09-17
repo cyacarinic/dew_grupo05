@@ -5,11 +5,11 @@
 <table>
   <thead>
     <tr>
-      <th>User</th>
+      <th>Contacto</th>
+      <th>Tipo</th>
       <th>Nombre</th>
       <th>Descripcion</th>
       <th>Telefono</th>
-      <th>Tipo estacionamiento</th>
       <th>Precio hora</th>
       <th>Imagen</th>
       <th>Departamento</th>
@@ -23,11 +23,11 @@
   <tbody>
     <% @parkings.each do |parking| %>
       <tr>
-        <td><%= parking.user_id %></td>
+        <td><%= parking.user.correo %></td>
+        <td><%= parking.parkingtype.nombre %></td>
         <td><%= parking.nombre %></td>
         <td><%= parking.descripcion %></td>
         <td><%= parking.telefono %></td>
-        <td><%= parking.tipo_estacionamiento %></td>
         <td><%= parking.precio_hora %></td>
         <td><%= parking.imagen %></td>
         <td><%= parking.departamento %></td>

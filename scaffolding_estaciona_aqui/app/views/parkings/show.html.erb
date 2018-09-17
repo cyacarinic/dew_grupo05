@@ -1,8 +1,13 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>User:</strong>
-  <%= @parking.user_id %>
+  <strong>Usuario:</strong>
+  <%= @parking.user.correo %>
+</p>
+
+<p>
+  <strong>Tipo:</strong>
+  <%= @parking.parkingtype.nombre %>
 </p>
 
 <p>
@@ -18,11 +23,6 @@
 <p>
   <strong>Telefono:</strong>
   <%= @parking.telefono %>
-</p>
-
-<p>
-  <strong>Tipo estacionamiento:</strong>
-  <%= @parking.tipo_estacionamiento %>
 </p>
 
 <p>

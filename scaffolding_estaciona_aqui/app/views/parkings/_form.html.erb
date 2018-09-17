@@ -12,8 +12,15 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :user_id %>
-    <%= form.number_field :user_id, id: :parking_user_id %>
+    <%= form.label :user_id, "Usuario" %>
+    <!-- <%= form.number_field :user_id, id: :parking_user_id %> -->
+    <%= form.collection_select :user_id, User.all, :id, :correo %>
+  </div>
+
+  <div class="field", "Tipo">
+    <%= form.label :parkingtype_id %>
+    <!-- <%= form.number_field :parkingtype_id, id: :parking_parkingtype_id %> -->
+    <%= form.collection_select :parkingtype_id, Parkingtype.all, :id, :nombre %>
   </div>
 
   <div class="field">
@@ -29,11 +36,6 @@
   <div class="field">
     <%= form.label :telefono %>
     <%= form.text_field :telefono, id: :parking_telefono %>
-  </div>
-
-  <div class="field">
-    <%= form.label :tipo_estacionamiento %>
-    <%= form.text_field :tipo_estacionamiento, id: :parking_tipo_estacionamiento %>
   </div>
 
   <div class="field">

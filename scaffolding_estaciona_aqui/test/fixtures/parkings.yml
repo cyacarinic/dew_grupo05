@@ -2,10 +2,10 @@
 
 one:
   user_id: 1
+  parkingtype_id: 1
   nombre: MyString
   descripcion: MyString
   telefono: MyString
-  tipo_estacionamiento: MyString
   precio_hora: 9.99
   imagen: MyString
   departamento: MyString
@@ -15,10 +15,10 @@ one:
 
 two:
   user_id: 1
+  parkingtype_id: 1
   nombre: MyString
   descripcion: MyString
   telefono: MyString
-  tipo_estacionamiento: MyString
   precio_hora: 9.99
   imagen: MyString
   departamento: MyString
