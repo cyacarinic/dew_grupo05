@@ -1,4 +1,15 @@
-# COMANDOS GENERADORES
+# INICIAR APLICACIÓN
+bundle install
+rake db:create
+rake db:migrate
+rake db:seed
+rails s
+
+# NAVEGACIÓN
+http://localhost:3000/users
+
+
+# COMANDOS UTILIZADOS
 rails g scaffold Usertype \
     nombre:string{45} \
     descripcion:string{45}
@@ -57,7 +68,7 @@ rails g scaffold Parkinghistory \
     motivo_cancelacion:string{300}
 
 
-rake db:create && rake db:migrate
-
+rake db:create && rake db:migrate && rake db:seed
 
 # Modificar modelos con llaves foráneas x las relaciones (has_many, belongs_to)
+# Modificar vistas para utilizar relaciones
