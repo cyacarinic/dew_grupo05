@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @parkinghistory.user_id %>
+</p>
+
+<p>
+  <strong>Parking:</strong>
+  <%= @parkinghistory.parking_id %>
+</p>
+
+<p>
+  <strong>Fecha inicio:</strong>
+  <%= @parkinghistory.fecha_inicio %>
+</p>
+
+<p>
+  <strong>Fecha fin:</strong>
+  <%= @parkinghistory.fecha_fin %>
+</p>
+
+<p>
+  <strong>Fecha registro:</strong>
+  <%= @parkinghistory.fecha_registro %>
+</p>
+
+<p>
+  <strong>Fecha cancelacion:</strong>
+  <%= @parkinghistory.fecha_cancelacion %>
+</p>
+
+<p>
+  <strong>Motivo cancelacion:</strong>
+  <%= @parkinghistory.motivo_cancelacion %>
+</p>
+
+<%= link_to 'Edit', edit_parkinghistory_path(@parkinghistory) %> |
+<%= link_to 'Back', parkinghistories_path %>

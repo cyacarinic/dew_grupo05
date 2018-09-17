@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Parkinghistories</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Parking</th>
+      <th>Fecha inicio</th>
+      <th>Fecha fin</th>
+      <th>Fecha registro</th>
+      <th>Fecha cancelacion</th>
+      <th>Motivo cancelacion</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @parkinghistories.each do |parkinghistory| %>
+      <tr>
+        <td><%= parkinghistory.user_id %></td>
+        <td><%= parkinghistory.parking_id %></td>
+        <td><%= parkinghistory.fecha_inicio %></td>
+        <td><%= parkinghistory.fecha_fin %></td>
+        <td><%= parkinghistory.fecha_registro %></td>
+        <td><%= parkinghistory.fecha_cancelacion %></td>
+        <td><%= parkinghistory.motivo_cancelacion %></td>
+        <td><%= link_to 'Show', parkinghistory %></td>
+        <td><%= link_to 'Edit', edit_parkinghistory_path(parkinghistory) %></td>
+        <td><%= link_to 'Destroy', parkinghistory, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Parkinghistory', new_parkinghistory_path %>

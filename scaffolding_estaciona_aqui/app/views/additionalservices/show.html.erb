@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Parking:</strong>
+  <%= @additionalservice.parking_id %>
+</p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @additionalservice.nombre %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @additionalservice.descripcion %>
+</p>
+
+<p>
+  <strong>Precio hora:</strong>
+  <%= @additionalservice.precio_hora %>
+</p>
+
+<%= link_to 'Edit', edit_additionalservice_path(@additionalservice) %> |
+<%= link_to 'Back', additionalservices_path %>
